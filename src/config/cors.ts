@@ -3,9 +3,7 @@ import { cors } from "hono/cors";
 
 config();
 
-const allowedOrigins = process.env.ANIWATCH_API_CORS_ALLOWED_ORIGINS
-  ? process.env.ANIWATCH_API_CORS_ALLOWED_ORIGINS.split(",")
-  : ["https://fastanime.great-site.net/", "*"];
+const allowedOrigins = ["https://fastanime.great-site.net/", "*"];
 
 const corsConfig = cors({
   allowMethods: ["GET"],
